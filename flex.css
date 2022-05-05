@@ -1,0 +1,115 @@
+*{
+margin: 0;
+padding: 0;
+}
+.display-flex{
+    display: flex;/*aligne horizontalment éléments qui étaient verticale par défaut*/
+    margin: 20px;
+    background-color: rgb(120, 129, 123);
+    border: 1px solid rgb(146, 64, 64);
+    color: white;
+}
+.inner-elem{
+    border: 1px solid #cf1c1c;
+    height: 100px;  
+    padding: 10px;
+  
+    background-color: rgb(24, 65, 52);
+}
+
+body{
+    background-color: rgb(116, 116, 99);
+}
+
+h2{
+    color: white;
+}
+
+
+                 /*CLASS*/
+.justify-content{
+    justify-content:   center; 
+    
+    /* taper " : " pour voir les autres possiblités proposées */
+    /* justify-content:   flex-end; mettre a la fin (droite) horizontalement */
+    /* justify-content:   space-between; */
+}
+.align-items{
+    height:600px ;
+    align-items: center;/*centrer verticalement*/
+    justify-content: center;/*centrer horizontalement*/
+    /*align-items: flex-end; mettre elements en bas du parent verticalment */
+   /* align-items: flex-start; mettre element tout en haut element parent verticalement*/
+}
+.align-self{/* element parent*/
+    height: 400px;
+}
+
+.align-self .inner-elem:first-child{
+    /*element enfant "first child est les premier block à gauche*/
+    
+    align-self: flex-end ; /* permet de déplacer un élément particulier à la VERTICALE*/
+}
+.align-self .inner-elem:nth-child(3){
+    align-self: center ;
+    
+}
+.flex-wrap{
+    flex-wrap:wrap;
+    /*les blocks font désormaias 45 % mais sont les un sur les autres car pas assez de place dans l'écran*/
+}
+.flex-wrap .inner-elem{
+    width: 45%;
+    /* sans le flex wrap les block enfants de la div class flex-wrap ne font 45% mais sont réparti tous le long de la div...
+    avoir bespoin de flex wrap*/
+    
+}
+.order1{
+order: 1;
+}
+.order2{
+order: 2;
+}
+.order3{
+order: 3;
+}
+.order4{
+order: 4;
+}
+.order5{
+order: 5;
+}
+
+.flex-grow{
+    /*coefficient pour definir les largeurs*/
+
+}
+.flex-grow .inner-elem:nth-child(2){
+    flex-grow: 3;/* pour mrttre 3 fois plus grand*/
+}
+
+             /*flex shrink*/
+.flex-shrink{
+    width: 350px;
+}
+
+.flex-shrink div{
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.flex-shrink div:nth-of-type(2){
+flex-shrink: 3;/* 3 fois plus petit que les autres*/
+}
+
+
+.flex-basis{
+    width: 250px;
+
+}
+.flex-basis div{
+    flex-basis: 50px;
+}
+.flex-basis div:nth-of-type(3){
+    flex-basis: 100px;
+}
